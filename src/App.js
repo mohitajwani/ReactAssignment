@@ -1,20 +1,36 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Splash from './Splash.js'
+//import axios from 'axios';
 
 class App extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      splashTimeout: false
+    }
+  }
+
+  onInterval(){
+    this.setState({
+      splashTimeout: true
+    })
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Welcome to EMS
-          </p>
-          <p>Please login or signup to proceed</p>
-        </header>
-      </div>
+      <React.Fragment>
+        {this.state.splashTimeout ? <div>Login Page</div> : <Splash />}
+      </React.Fragment>
     );
+  }
+
+  componentDidMount() {
+    this.updateInterval = setTimeout(() => {
+      this.onInterval()
+    }, 2000)
   }
 }
 
