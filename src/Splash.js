@@ -9,7 +9,7 @@ class Splash extends Component {
                 <div className="App">
                     <header className="App-header">
                         <img src={logo} className="App-logo" alt="logo" />
-                        <p>Welcome to EMS</p>
+                        <p>Welcome to EMS!</p>
                         <p>This project is made by Mohit Ajwani</p>
                     </header>
                 </div>
