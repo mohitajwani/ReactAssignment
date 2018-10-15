@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import Splash from './Splash.js'
+import Login from './Login.js'
+import Signup from './Signup.js'
 //import axios from 'axios';
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.splashTimeout ? <div>Login Page</div> : <Splash />}
+        {this.state.splashTimeout ? <div><Login /><Signup /></div> : <Splash />}
       </React.Fragment>
     );
   }
