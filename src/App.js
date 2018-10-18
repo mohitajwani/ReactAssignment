@@ -30,7 +30,7 @@ class App extends Component {
   componentDidMount() {
     this.updateInterval = setTimeout(() => {
       this.onInterval()
-    }, 4000)
+    }, 1)
   }
 }
 

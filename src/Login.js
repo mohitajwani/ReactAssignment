@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import AccountCircle from "@material-ui/icons/AccountCircle";
@@ -16,8 +14,8 @@ class Login extends Component {
         return (
             <React.Fragment>
                 <h1>Login</h1>
-                <Grid container spacing={8} alignItems="flex-end">
-                    <Grid row>
+                <div>
+                    <Grid container justify="center" spacing={8} alignItems="flex-end">
                         <Grid item>
                             <AccountCircle />
                         </Grid>
@@ -25,7 +23,7 @@ class Login extends Component {
                             <TextField id="username-input" label="Username" />
                         </Grid>
                     </Grid>
-                    <Grid row>
+                    <Grid container justify="center" spacing={8} alignItems="flex-end">
                         <Grid item>
                             <PasswordLock />
                         </Grid>
@@ -37,10 +35,10 @@ class Login extends Component {
                             />
                         </Grid>
                     </Grid>
-                </Grid>
-                <Button variant="contained" color="primary">
-                    Login
+                    <Button variant="contained" color="primary">
+                        Login
                 </Button>
+                </div>
             </React.Fragment>
         );
     }
