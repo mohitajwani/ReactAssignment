@@ -4,8 +4,12 @@ import Grid from "@material-ui/core/Grid";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import PasswordLock from "@material-ui/icons/Lock";
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
+const divStyle = {
+    margin: '30px',
+};
 class Login extends Component {
     constructor(props) {
         super(props);
@@ -37,9 +41,20 @@ class Login extends Component {
                                 />
                             </Grid>
                         </Grid>
+                        <div style={divStyle}></div>
                         <Grid container justify="center" spacing={8} alignItems="flex-end">
                             <Grid item>
-                                <Button variant="contained" color="primary">Login</Button>
+                                <Button
+                                    variant="contained"
+                                    color="primary">
+                                    Login
+                                    </Button>
+                            </Grid>
+                        </Grid>
+                        <div style={divStyle}></div>
+                        <Grid container justify="center" spacing={8} alignItems="flex-end">
+                            <Grid item>
+                                <div>If you don't have an account. <Link to="/signup">Signup</Link></div>
                             </Grid>
                         </Grid>
                     </div>
@@ -48,34 +63,5 @@ class Login extends Component {
         );
     }
 }
-
-// const styles = theme => ({
-//     margin: {
-//       margin: theme.spacing.unit
-//     }
-//   });
-
-//   function InputWithIcon(props) {
-//     const { classes } = props;
-
-//     return (
-//       <div>
-//         <div className={classes.margin}>
-//           <Grid container spacing={8} alignItems="flex-end">
-//             <Grid item>
-//               <AccountCircle />
-//             </Grid>
-//             <Grid item>
-//               <TextField id="input-with-icon-grid" label="Username" />
-//             </Grid>
-//           </Grid>
-//         </div>
-//       </div>
-//     );
-//   }
-
-//   InputWithIcon.propTypes = {
-//     classes: PropTypes.object.isRequired
-//   };
 
 export default Login;

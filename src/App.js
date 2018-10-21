@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import Splash from './Splash.js'
 import Login from './Login.js'
 import Signup from './Signup.js'
-//import axios from 'axios';
+import RouterApp from './router/App'
+import { BrowserRouter, Redirect } from 'react-router-dom'
+import axios from 'axios';
+import _ from 'lodash';
 
 class App extends Component {
-  
+
   constructor(props) {
     super(props);
     this.state = {
@@ -13,7 +16,8 @@ class App extends Component {
     }
   }
 
-  onInterval(){
+  onInterval() {
+    // Check if token is available, redirect to home else Login
     this.setState({
       splashTimeout: true
     })
@@ -21,9 +25,11 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        {this.state.splashTimeout ? <div><Login /><Signup /></div> : <Splash />}
-      </React.Fragment>
+      <BrowserRouter>
+        <React.Fragment>
+          {this.state.splashTimeout ? <Redirect to="/login" /> : <Splash />}
+        </React.Fragment>
+      </BrowserRouter>
     );
   }
 
