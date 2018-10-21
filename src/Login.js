@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import PasswordLock from "@material-ui/icons/Lock";
 import Button from '@material-ui/core/Button';
+import './Login.css';
 
 class Login extends Component {
     constructor(props) {
@@ -13,31 +14,35 @@ class Login extends Component {
     render() {
         return (
             <React.Fragment>
-                <h1>Login</h1>
-                <div>
-                    <Grid container justify="center" spacing={8} alignItems="flex-end">
-                        <Grid item>
-                            <AccountCircle />
+                <div className="centerPage">
+                    <h1>Login</h1>
+                    <div>
+                        <Grid container justify="center" spacing={8} alignItems="flex-end">
+                            <Grid item>
+                                <AccountCircle />
+                            </Grid>
+                            <Grid item>
+                                <TextField id="username-input" label="Username" />
+                            </Grid>
                         </Grid>
-                        <Grid item>
-                            <TextField id="username-input" label="Username" />
+                        <Grid container justify="center" spacing={8} alignItems="flex-end">
+                            <Grid item>
+                                <PasswordLock />
+                            </Grid>
+                            <Grid item>
+                                <TextField
+                                    id="password-input"
+                                    label="Password"
+                                    type="password"
+                                />
+                            </Grid>
                         </Grid>
-                    </Grid>
-                    <Grid container justify="center" spacing={8} alignItems="flex-end">
-                        <Grid item>
-                            <PasswordLock />
+                        <Grid container justify="center" spacing={8} alignItems="flex-end">
+                            <Grid item>
+                                <Button variant="contained" color="primary">Login</Button>
+                            </Grid>
                         </Grid>
-                        <Grid item>
-                            <TextField
-                                id="password-input"
-                                label="Password"
-                                type="password"
-                            />
-                        </Grid>
-                    </Grid>
-                    <Button variant="contained" color="primary">
-                        Login
-                </Button>
+                    </div>
                 </div>
             </React.Fragment>
         );
