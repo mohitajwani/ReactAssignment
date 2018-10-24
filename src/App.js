@@ -25,11 +25,9 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
         <React.Fragment>
           {this.state.splashTimeout ? <Redirect to="/login" /> : <Splash />}
         </React.Fragment>
-      </BrowserRouter>
     );
   }
 
