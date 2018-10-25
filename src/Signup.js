@@ -119,7 +119,7 @@ class Signup extends Component {
                         <div style={divStyle}></div>
                         <Grid container justify="center" spacing={8} alignItems="flex-end">
                             <Grid item>
-                                <div>If you don't have an account. <Link to="/signup">Signup</Link></div>
+                                <div>If you already have an account. <Link to="/login">Login</Link></div>
                             </Grid>
                         </Grid>
                     </div>
