@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import AccountBox from "@material-ui/icons/AccountBox";
+import Gender from "@material-ui/icons/Wc";
 import Email from "@material-ui/icons/Email";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import PasswordLock from "@material-ui/icons/Lock";
@@ -43,46 +44,27 @@ class Signup extends Component {
                                 <TextField id="name-input" label="Name" />
                             </Grid>
                         </Grid>
-                        <FormControl component="fieldset">
-                        <FormLabel component="legend">Gender</FormLabel>
-                            <RadioGroup
-                                aria-label="gender"
-                                name="gender2"
-                                value={this.state.value}
-                                onChange={this.handleChange}>
-
-                                <FormControlLabel
-                                            value="female"
-                                            control={<Radio color="primary" />}
-                                            label="Female"
-                                            labelPlacement="end"
-                                        />
-
-                                        <FormControlLabel
-                                            value="male"
-                                            control={<Radio color="primary" />}
-                                            label="Male"
-                                            labelPlacement="end"
-                                        />
-                                {/* <Grid container justify="center" spacing={8} alignItems="flex-end">
-                                    <Grid item>
-                                        <FormControlLabel
-                                            value="male"
-                                            control={<Radio color="primary" />}
-                                            label="Male"
-                                            labelPlacement="end"
-                                        />
-                                    </Grid>
-                                    <Grid item>
-                                        <FormControlLabel
-                                            value="female"
-                                            control={<Radio color="primary" />}
-                                            label="Female"
-                                            labelPlacement="end"
-                                        />
-                                    </Grid>
-                                </Grid> */}
-                            </RadioGroup>
+                        <FormControl component="fieldset" spacing={8}>
+                            <div style={{paddingTop: "20px",display: "inline-flex"}}>
+                                <Gender style={{padding:"8px"}} />
+                                <RadioGroup
+                                    aria-label="gender"
+                                    name="gender2"
+                                    value={this.state.value}
+                                    style={{ display: 'initial' }}
+                                    onChange={this.handleChange}>
+                                    <FormControlLabel
+                                        value="male"
+                                        control={<Radio color="primary" />}
+                                        label="Male"
+                                        labelPlacement="end" />
+                                    <FormControlLabel
+                                        value="female"
+                                        control={<Radio color="primary" />}
+                                        label="Female"
+                                        labelPlacement="end" />
+                                </RadioGroup>
+                            </div>
                         </FormControl>
                         <Grid container justify="center" spacing={8} alignItems="flex-end">
                             <Grid item>
