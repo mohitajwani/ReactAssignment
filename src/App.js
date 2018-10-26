@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import Splash from './Splash.js'
-import Login from './Login.js'
-import Signup from './Signup.js'
-import RouterApp from './router/App'
-import { BrowserRouter, Redirect } from 'react-router-dom'
-import axios from 'axios';
-import _ from 'lodash';
+import { Redirect } from 'react-router-dom'
 
 class App extends Component {
 
