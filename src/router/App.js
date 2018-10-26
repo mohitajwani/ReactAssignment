@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Login from '../Login';
-import Signup from '../Signup';
+import Login from '../components/login/Login';
+import Signup from '../components/signup/Signup';
 import AppPage from '../App';
 
 const Homepage = () => (<div>Homepage</div>)

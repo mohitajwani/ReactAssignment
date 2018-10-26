@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Splash from './Splash.js'
+import Splash from './components/splash/Splash.js'
 import { Redirect } from 'react-router-dom'
 
 class App extends Component {
