@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Splash from './components/splash/Splash.js'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import Login from './components/login/Login';
+import Login from './containers/Login';
 import Signup from './components/signup/Signup';
 
 const Homepage = () => (<div>Homepage</div>)

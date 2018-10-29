@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import MainAppContainer from '../App'
+import Signup from '../components/signup/Signup'
 
 
 const mapStateToProps = (state) => {
@@ -33,4 +33,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainAppContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(Signup);

@@ -14,6 +14,7 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.loginUser = this.loginUser.bind(this)
+        // this.props.loginEmployee = this.loginEmployee.bind(this)
     }
     render() {
         return (
@@ -46,7 +47,8 @@ class Login extends Component {
                             <Grid item>
                                 <Button
                                     variant="contained"
-                                    color="primary" onClick={this.loginUser}>
+                                    color="primary" 
+                                    onClick={() => {this.props.loginEmployee("abc", "abcd")}}>
                                     Login
                                     </Button>
                             </Grid>
