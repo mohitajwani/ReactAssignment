@@ -6,8 +6,6 @@ import PasswordLock from "@material-ui/icons/Lock";
 import Button from '@material-ui/core/Button';
 import { Redirect, Link } from 'react-router-dom';
 import './Login.css';
-import axios from 'axios';
-import _ from 'lodash';
 
 const divStyle = {
     margin: '30px',
@@ -15,7 +13,6 @@ const divStyle = {
 class Login extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
         this.loginUser = this.loginUser.bind(this)
     }
     render() {
