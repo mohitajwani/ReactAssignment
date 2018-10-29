@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import Splash from './components/splash/Splash.js'
-import { Redirect } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import Login from './components/login/Login';
+import Signup from './components/signup/Signup';
+
+const Homepage = () => (<div>Homepage</div>)
+
+const Dashboard = () => (<div>Dashboard</div>)
 
 class App extends Component {
 
@@ -20,9 +26,18 @@ class App extends Component {
 
   render() {
     return (
+      <BrowserRouter>
         <React.Fragment>
+          <Switch>
+            <Route path="/login" component={Login} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/" component={Homepage} />
+          </Switch>
+
           {this.state.splashTimeout ? <Redirect to="/login" /> : <Splash />}
         </React.Fragment>
+      </BrowserRouter>
     );
   }
 

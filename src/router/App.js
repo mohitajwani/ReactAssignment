@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Login from '../components/login/Login';
 import Signup from '../components/signup/Signup';
 import AppPage from '../App';
@@ -16,16 +16,14 @@ class App extends Component {
     }
     render() {
         return (
-            <BrowserRouter>
-                <React.Fragment>
-                    <Switch>
-                        <Route path="/login" component={Login} />
-                        <Route path="/signup" component={Signup} />
-                        <Route path="/home" component={Homepage} />
-                        <Route path="/" component={AppPage} />
-                    </Switch>
-                </React.Fragment>
-            </BrowserRouter>
+            <React.Fragment>
+                <Switch>
+                    <Route path="/login" component={Login} />
+                    <Route path="/signup" component={Signup} />
+                    <Route path="/home" component={Homepage} />
+                    <Route path="/" component={AppPage} />
+                </Switch>
+            </React.Fragment>
         );
     }
 }
