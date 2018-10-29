@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Splash from './components/splash/Splash.js'
-import { BrowserRouter, Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
 

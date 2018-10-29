@@ -13,7 +13,6 @@ const reducer = (
                     action.payload.value,
                 ]
             }
-            break;
         case "DELETE_EMPLOYEE":
             let newEmployees = state.employees.filter((employee, index) => {
                 return index !== action.payload.value
